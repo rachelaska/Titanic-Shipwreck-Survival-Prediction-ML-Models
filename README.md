@@ -94,14 +94,16 @@ The **Random Forest Classifier** is the best-performing model for the Titanic Su
 
 1. **High Accuracy**: Achieved **97.9% training accuracy** and **81.0% validation accuracy**, demonstrating strong learning capability and good generalization.
 2. **Balanced Performance**: Maintained a balance between **Precision** (82.4%) and **Recall** (79.6%), minimizing both false positives and false negatives.
-3. **Feature Insights**: Identified key features influencing survival predictions, such as:
-   - **Pclass**
-   - **Sex**
-   - **Age**
-   - **SibSp**
-   - **Parch**
-   - **Fare**
-   - **Embarked**
+3. **Robustness**: Performs well with both numerical and categorical features, even with missing or noisy data.
+4. **Feature Insights**: Identified key features influencing survival predictions, such as:
+   - **Pclass**: Passengers in first-class had significantly higher survival rates compared to those in lower classes.
+   - **Sex**: Female passengers were more likely to survive than male passengers.
+   - **Age**: Younger passengers, especially children, had better survival odds.
+   - **SibSp**: Passengers with families onboard showed varying survival probabilities based on family size.
+   - **Parch**: Passengers with families onboard showed varying survival probabilities based on family size.
+   - **Fare**: Higher ticket fares correlated with increased survival rates, likely linked to class and economic status.
+   - **Embarked**: Passengers boarding from certain ports exhibited different survival rates, possibly reflecting socio-economic or class-related differences.
+     
 ---
 
 ## **Ethical Considerations**
