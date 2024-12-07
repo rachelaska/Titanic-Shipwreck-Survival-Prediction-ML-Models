@@ -1,23 +1,26 @@
-# **Model Card: Titanic-Shipwreck-Survival-Prediction-ML-Models**
+# **Model Card: Titanic Shipwreck Survival Prediction ML Models**
 ## **Basic Information**
-- **Person or organization developing model**: Himavarsha Yerrapothu (himavarsha.yerrapothu@gwu.edu), Rachel Aska Niharika (rachel.aska@gwu.edu).
+- **Person or organization developing model**: Rachel Aska (rachel.aska@gwu.edu) & Himavarsha Yerrapothu (himavarsha.yerrapothu@gwu.edu).
 - **Model Date**: December 6, 2024
 - **Model Version**: 1.0
 - **License**: MIT License
-- **Model Implementation Code**: titanic-shipwreck-predicting-models-with-ml.ipynb
+- **Model Implementation Code**: titanic-shipwreck-survival-predicting-models-with-ml.ipynb
 
 ---
-
 ## **Intended Use**
 - **Intended Uses**: 
   - Predict survival probability of Titanic passengers based on demographic and ticketing data.
-  - Educational purposes and machine learning practice.
+  - Practice machine learning concepts, such as data preprocessing, feature engineering, model training, evaluation, and optimization.
+  - Provide hands-on experience with Python libraries like Pandas, NumPy, and Scikit-learn for building predictive models.
+  - Perform statistical analysis of survival trends and correlations between demographic or socio-economic factors and survival rates.
 - **Intended Users**:
   - Students, educators, and beginner data scientists.
 - **Out-of-Scope Uses**:
   - Applications requiring high-stakes decision-making.
-  - Predictions outside the scope of the Titanic dataset.
+  - Use similar analyses to explore survival trends in other historical contexts and highlight socio-economic disparities.
+  - Use the techniques to evaluate fairness in decision-making systems in healthcare, hiring, or education.
 ---
+
 
 ## **Training Data**
 - **Source**: [Kaggle Titanic Dataset](https://www.kaggle.com/c/titanic/data)
@@ -29,7 +32,8 @@
   - `Embarked` was filled with the most frequent value.
   - `Sex` and `Embarked` were encoded numerically.
 - **Data Dictionary**:
-  | Name            | Modeling Role | Measurement Level | Description                                        |
+
+| Name            | Modeling Role | Measurement Level | Description                                        |
 |-----------------|---------------|-------------------|-----------------------------------------------     |
 | **PassengerId** | ID            | int               | Unique row identifier                              |
 | **Survived**    | Target        | int (binary)      | Survival status (1 = Survived, 0 = Did not survive)|
@@ -41,6 +45,7 @@
 | **Parch**       | Input         | int               | Number of parents/children aboard                  |
 | **Fare**        | Input         | float             | Ticket fare                                        |
 | **Embarked**    | Input         | int               | Port of embarkation (0 = C, 1 = Q, 2 = S)          |
+
 ---
 
 ## **Test Data**
@@ -49,6 +54,7 @@
 - **Differences in Columns**: No `Survived` column in the test set.
 
 ---
+
 ## **Model Details**
 - **Input Features**: `Pclass`, `Sex`, `Age`, `SibSp`, `Parch`, `Fare`, `Embarked`
 - **Target Variable**: `Survived`
@@ -65,6 +71,8 @@
       max_depth=5,
       random_state=1
   )
+
+
 ## **Quantitative Analysis**
 
 ### **Performance Metrics**
@@ -81,20 +89,26 @@
 ## **Conclusion**
 
 ### **Best Model: Random Forest Classifier**
+
 The **Random Forest Classifier** is the best-performing model for the Titanic Survival Prediction project due to the following reasons:
 
 1. **High Accuracy**: Achieved **97.9% training accuracy** and **81.0% validation accuracy**, demonstrating strong learning capability and good generalization.
 2. **Balanced Performance**: Maintained a balance between **Precision** (82.4%) and **Recall** (79.6%), minimizing both false positives and false negatives.
 3. **Feature Insights**: Identified key features influencing survival predictions, such as:
-   - **Sex**
    - **Pclass**
-   - **Fare**
+   - **Sex**
    - **Age**
+   - **SibSp**
+   - **Parch**
+   - **Fare**
+   - **Embarked**
 ---
 
 ## **Ethical Considerations**
 
 - **Bias**: The model relies heavily on features like **gender (Sex)** and **passenger class (Pclass)**, reflecting historical biases in survival rates.
 - **Missing Data**: Imputation of missing values (e.g., **Age**, **Cabin**) may introduce inaccuracies.
+- **Data Privacy**: Using Titanic passenger data assumes the data is public or used ethically. Modern datasets must ensure compliance with privacy laws like GDPR.
 - **Unbalanced Classes**: Unequal distribution of survivors and non-survivors could affect fairness in predictions.
 - **Historical Context**: The dataset is specific to the 1912 Titanic disaster and not representative of modern scenarios.
+- **Interpretability**: While the model achieved high accuracy, care must be taken to ensure stakeholders can interpret the results appropriately to avoid misuse or misunderstanding.
