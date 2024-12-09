@@ -86,6 +86,17 @@
 | **Random Forest**      | Training      | 97.9%    | 98.2%     | 97.6%  | 97.9%    |
 |                        | Validation    | 81.0%    | 82.4%     | 79.6%  | 81.0%    |
 
+## **Ethical Considerations**
+
+- **Bias**: The model relies heavily on features like **gender (Sex)** and **passenger class (Pclass)**, reflecting historical biases in survival rates.
+- **Missing Data**: Imputation of missing values (e.g., **Age**, **Cabin**) may introduce inaccuracies.
+- **Data Privacy**: Using Titanic passenger data assumes the data is public or used ethically. Modern datasets must ensure compliance with privacy laws like GDPR.
+- **Unbalanced Classes**: Unequal distribution of survivors and non-survivors could affect fairness in predictions.
+- **Miuse of Predictions**: Misinterpreting predictions as deterministic rather than probabilistic could lead to harmful decision-making in contexts such as healthcare or disaster management
+- **Interpretability**: ML models, especially ensemble methods like Random Forest, can be complex and challenging to interpret for non-technical stakeholders.
+
+--
+
 ## **Conclusion**
 
 ### **Best Model: Random Forest Classifier**
@@ -105,12 +116,3 @@ The **Random Forest Classifier** is the best-performing model for the Titanic Su
    - **Embarked**: Passengers boarding from certain ports exhibited different survival rates, possibly reflecting socio-economic or class-related differences.
      
 ---
-
-## **Ethical Considerations**
-
-- **Bias**: The model relies heavily on features like **gender (Sex)** and **passenger class (Pclass)**, reflecting historical biases in survival rates.
-- **Missing Data**: Imputation of missing values (e.g., **Age**, **Cabin**) may introduce inaccuracies.
-- **Data Privacy**: Using Titanic passenger data assumes the data is public or used ethically. Modern datasets must ensure compliance with privacy laws like GDPR.
-- **Unbalanced Classes**: Unequal distribution of survivors and non-survivors could affect fairness in predictions.
-- **Miuse of Predictions**: Misinterpreting predictions as deterministic rather than probabilistic could lead to harmful decision-making in contexts such as healthcare or disaster management
-- **Interpretability**: ML models, especially ensemble methods like Random Forest, can be complex and challenging to interpret for non-technical stakeholders.
