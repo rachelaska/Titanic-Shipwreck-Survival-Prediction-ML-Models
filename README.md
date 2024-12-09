@@ -95,7 +95,7 @@
 - **Miuse of Predictions**: Misinterpreting predictions as deterministic rather than probabilistic could lead to harmful decision-making in contexts such as healthcare or disaster management
 - **Interpretability**: ML models, especially ensemble methods like Random Forest, can be complex and challenging to interpret for non-technical stakeholders.
 
---
+---
 
 ## **Conclusion**
 
