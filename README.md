@@ -3,7 +3,7 @@
 - **Person or organization developing model**: Rachel Aska (rachel.aska@gwu.edu) & Himavarsha Yerrapothu (himavarsha.yerrapothu@gwu.edu).
 - **Model Date**: December 6, 2024
 - **Model Version**: 1.0
-- **License**: MIT License
+- **License**: Apache 2.0 License
 - **Model Implementation Code**: titanic-shipwreck-survival-predicting-models-with-ml.ipynb
 
 ---
