@@ -1,6 +1,6 @@
 # **Model Card: Titanic Shipwreck Survival Prediction ML Models**
 ## **Basic Information**
-- **Person or organization developing model**: Rachel Aska (rachel.aska@gwu.edu) & Himavarsha Yerrapothu (himavarsha.yerrapothu@gwu.edu).
+- **Person or organization developing model**: Rachel Aska (rachel.aska@gwu.edu).
 - **Model Date**: December 6, 2024
 - **Model Version**: 1.0
 - **License**: Apache-2.0 
